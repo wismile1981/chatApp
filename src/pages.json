@@ -1,0 +1,40 @@
+{
+  "pages": [{
+      "path": "pages/home",
+      "style": {
+        "navigationBarTitleText": "chat测试"
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#D3D3D3",
+    "selectedColor": "#1649FF",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/home",
+        "text": "首页",
+        "iconPath": "static/img/bottom_bar_home_nor@2x.png",
+        "selectedIconPath": "static/img/bottom_bar_home_pre@2x.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/img/bottom_bar_me_nor@2x.png",
+        "selectedIconPath": "static/img/bottom_bar_me_pre@2x.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "chat测试",
+    "navigationBarBackgroundColor": "#F6F7F8",
+    "backgroundColor": "#F6F7F8",
+    "renderingMode": "seperated"
+  }
+}

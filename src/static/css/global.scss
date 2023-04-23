@@ -1,0 +1,350 @@
+/* 自定义颜色 */
+$blue: #628BF5;
+$green: #30CD65;
+$orange: #F76320;
+$lightgray: #F1F2F9;
+$gray: #999999;
+$black: #333;
+
+page {
+  color: #222;
+  background-color: #f6f7f8;
+}
+
+input,
+view,
+button {
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+button::after {
+  border-radius: 0;
+  border: 0px solid;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.orange {
+  color: $orange;
+}
+
+.black {
+  color: $black;
+}
+
+.gray {
+  color: $gray;
+}
+
+// 数值数组
+$font-size: 12,
+14,
+16,
+18,
+20,
+24,
+32;
+
+/*文字排版*/
+@each $fs in $font-size {
+  .font-#{$fs} {
+    font-size: #{$fs}px;
+  }
+}
+
+/*定位*/
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*全称是“。blockCenter”，作用为使块级元素居中。直接试用她是不能使块级元素居中的，还需设定宽度。*/
+.float-left {
+  float: left;
+}
+
+/*设置display：inline 为了解决IE6的双外边距bug。在IE6下，如果对元素设置了浮动，同时设置了margin-left或者margin-right，margin值会加倍，如设置margin-left：10px在IE6下会显示为margin-left：20px。解决办法就是设置display：inline。*/
+.float-right {
+  float: right;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/*用于在父容器直接清除子元素浮动。*/
+.inline {
+  display: inline;
+}
+
+/*用于在父容器直接清除子元素浮动。*/
+.block {
+  display: block;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.zoom {
+  zoom: 1;
+}
+
+/*(IE特有属性)触发hasLayout*/
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+/* 超出 */
+.text-overflow {
+  overflow: hidden;
+}
+
+.text-ellipsis {
+  overflow: hidden; //超出的文本隐藏
+  text-overflow: ellipsis; //溢出用省略号显示
+}
+
+.text-ellipsis-1 {
+  white-space: nowrap;
+}
+
+$text-line: 2,
+3,
+4,
+5,
+8,
+10,
+12,
+16,
+20,
+30,
+50;
+
+/*超出溢出行数*/
+@each $tl in $text-line {
+  .text-ellipsis-#{$tl} {
+    display: -webkit-box; //作为弹性伸缩盒子模型显示。
+    -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
+    -webkit-line-clamp: #{$tl};
+  }
+}
+
+/* 距离 */
+$screen-nums: 10,
+20,
+30,
+40,
+50,
+60,
+70,
+80,
+90,
+100,
+150,
+200,
+250,
+300,
+400,
+500,
+600,
+700,
+800;
+
+/*长度高度*/
+.width-all {
+  width: 100%;
+}
+
+.height-all {
+  height: 100%;
+}
+
+@each $snum in $screen-nums {
+  .width-#{$snum} {
+    width: #{$snum}px;
+  }
+
+  .height-#{$snum} {
+    height: #{$snum}px;
+  }
+}
+
+$range-nums: 5,
+10,
+20,
+30,
+40,
+50,
+60,
+70,
+80,
+90,
+100,
+150,
+200;
+
+@each $rnum in $range-nums {
+  .margin-#{$rnum} {
+    margin: #{$rnum}px;
+  }
+
+  .margin-top-#{$rnum} {
+    margin-top: #{$rnum}px;
+  }
+
+  .margin-right-#{$rnum} {
+    margin-right: #{$rnum}px;
+  }
+
+  .margin-bottom-#{$rnum} {
+    margin-bottom: #{$rnum}px;
+  }
+
+  .margin-left-#{$rnum} {
+    margin-left: #{$rnum}px;
+  }
+
+  .padding-#{$rnum} {
+    padding: #{$rnum}px;
+  }
+
+  .padding-top-#{$rnum} {
+    padding-top: #{$rnum}px;
+  }
+
+  .padding-right-#{$rnum} {
+    padding-right: #{$rnum}px;
+  }
+
+  .padding-bottom-#{$rnum} {
+    padding-bottom: #{$rnum}px;
+  }
+
+  .padding-left-#{$rnum} {
+    padding-left: #{$rnum}px;
+  }
+
+  .top-#{$rnum} {
+    top: #{$rnum}px;
+  }
+
+  .right-#{$rnum} {
+    right: #{$rnum}px;
+  }
+
+  .bottom-#{$rnum} {
+    bottom: #{$rnum}px;
+  }
+
+  .left-#{$rnum} {
+    left: #{$rnum}px;
+  }
+}
+
+/* 弹性布局 */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*内容溢出换行*/
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/*主轴上的对齐方式*/
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+/**
+ * 交叉轴上对齐方式
+ */
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.self-end {
+  justify-self: flex-end;
+}
+
+.uni-searchbar__box {
+  background-color: #fff !important;
+}

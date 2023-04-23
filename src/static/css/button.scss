@@ -1,0 +1,27 @@
+.btn {
+  height: 44px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  &.blue {
+    border: #1649ff 1px solid;
+    &.pill{
+      background: #1649ff;
+      color: #fff;
+    }
+    &.blank{
+      color: #1649ff;
+    }
+  }
+  &.red {
+    border: #FF3E3E 1px solid;
+    &.pill{
+      background: #FF3E3E;
+      color: #fff;
+    }
+    &.blank{
+      color: #FF3E3E;
+    }
+  }
+}
